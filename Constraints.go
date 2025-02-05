@@ -40,7 +40,11 @@ type String interface {
 	~string
 }
 
-// Orderable is a constraint that permits any real numeric type or string type.
-type Orderable interface {
+// Equatable is an interface that is implemented by all equatable types (booleans, numbers, strings, pointers, channels, arrays of comparable types, structs whose fields are all comparable types).
+// The Equatable interface may only be used as a type parameter constraint, not as the type of a variable.
+type Equatable comparable
+
+// Comparable is a constraint that permits any real numeric type or string type.
+type Comparable interface {
 	Real | String
 }

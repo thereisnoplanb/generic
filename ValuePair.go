@@ -2,9 +2,9 @@ package generic
 
 // Represents a pair of values.
 //
-// Type1 - The type of the pair's first component.
-// Type2 - The type of the pair's second component.
-type ValuePair[Type1 any, Type2 any] struct {
-	Item1 Type1
-	Item2 Type2
+// TFirst - The type of the pair's first component.
+// TSecond - The type of the pair's second component.
+type ValuePair[TFirst any, TSecond any] struct {
+	Item1 TFirst
+	Item2 TSecond
 }
