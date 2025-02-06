@@ -18,4 +18,4 @@ package generic
 //	| 0                     | first equals second.          |
 //	| Greater than 0        | first is greater than second. |
 //	+-----------------------+-------------------------------+
-type Comparison[TObject any] func(first TObject, second TObject) int
+type Comparison[TObject any] func(first TObject, second TObject) (reslut int)
