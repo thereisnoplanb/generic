@@ -40,9 +40,9 @@ type String interface {
 	~string
 }
 
-// Equatable is an interface that is implemented by all equatable types (booleans, numbers, strings, pointers, channels, arrays of comparable types, structs whose fields are all comparable types).
+// Equatable is an interface that is implemented by all types that can be compared using equal (booleans, numbers, strings, pointers, channels, arrays of comparable types, structs whose fields are all comparable types).
 // The Equatable interface may only be used as a type parameter constraint, not as the type of a variable.
-type Equatable comparable
+type Equatable = comparable
 
 // Comparable is a constraint that permits any real numeric type or string type.
 type Comparable interface {

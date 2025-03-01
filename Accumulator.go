@@ -2,12 +2,19 @@ package generic
 
 // Represents the method that accumulates object to accumulator.
 //
-// Parameters
+// # Parameters
 //
-//	accumulator TAccumulator - The current value of the accumulator.
-//	object TObject - The object to accumulate.
+//	accumulator TAccumulator
 //
-// Return Value
+// The current value of the accumulator.
 //
-//	result TAccumulator - The accumulated value of the current value of the accumulator and the object to accumulate.
-type Accumulator[TObject any, TAccumulator any] func(accumulator TAccumulator, object TObject) (result TAccumulator)
+//	object TObject
+//
+// The object to accumulate.
+//
+// # Returns
+//
+//	TAccumulator
+//
+// The accumulated value of the current value of the accumulator and the object to accumulate.
+type Accumulator[TObject any, TAccumulator any] func(accumulator TAccumulator, object TObject) TAccumulator

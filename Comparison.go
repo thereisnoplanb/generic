@@ -2,20 +2,27 @@ package generic
 
 // Represents the method that compares two objects of the same type.
 //
-// Parameters
+// # Parameters
 //
-//	first TObject - The first object to compare.
-//	second TObject - The second object to compare.
+//	x TObject
 //
-// Return Value
+// The first object to compare.
 //
-//	result int - A signed integer that indicates the relative values of first and second, as shown in the following table.
+//	y TObject
 //
-//	+-----------------------+-------------------------------+
-//	| Result                | Meaning                       |
-//	+-----------------------+-------------------------------+
-//	| Less than 0           | first is less than second.    |
-//	| 0                     | first equals second.          |
-//	| Greater than 0        | first is greater than second. |
-//	+-----------------------+-------------------------------+
-type Comparison[TObject any] func(first TObject, second TObject) (reslut int)
+// The second object to compare.
+//
+// # Returns
+//
+//	int
+//
+// A signed integer that indicates the relative values of x and y, as shown in the following table.
+//
+//	+-----------------------+----------------------+
+//	| Result                | Meaning              |
+//	+-----------------------+----------------------+
+//	| Less than 0           | x is less than y.    |
+//	| 0                     | x equals y.          |
+//	| Greater than 0        | x is greater than y. |
+//	+-----------------------+----------------------+
+type Comparison[TObject any] func(x TObject, y TObject) int

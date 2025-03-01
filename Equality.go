@@ -2,12 +2,19 @@ package generic
 
 // Represents the method that reports two objects of the same type are equal.
 //
-// Parameters
+// # Parameters
 //
-//	first TObject - The first object to compare.
-//	second TObject - The second object to compare.
+//	x TObject
 //
-// Return Value
+// The first object to compare for equality.
 //
-//	result bool - true if the specified objects are equal; otherwise, false.
-type Equality[TObject any] func(first TObject, second TObject) (result bool)
+//	y TObject
+//
+// The second object to compare for equality.
+//
+// # Returns
+//
+//	bool
+//
+// True if the specified objects are equal; otherwise, false.
+type Equality[TObject any] func(x TObject, y TObject) bool
